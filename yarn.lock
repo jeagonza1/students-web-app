@@ -7880,7 +7880,7 @@ react-scripts@^5.0.1:
     source-map-loader "^3.0.0"
     style-loader "^3.3.1"
     tailwindcss "^3.0.2"
-    terser-webpack-plugin "^5.2.5"
+    terser-webpack-plugin "3.0.0"
     webpack "^5.64.4"
     webpack-dev-server "^4.6.0"
     webpack-manifest-plugin "^4.0.2"
@@ -8835,9 +8835,9 @@ terminal-link@^2.0.0:
     ansi-escapes "^4.2.1"
     supports-hyperlinks "^2.0.0"
 
-terser-webpack-plugin@^5.2.5, terser-webpack-plugin@^5.3.7:
+terser-webpack-plugin@3.0.0, terser-webpack-plugin@3.0.0:
   version "5.3.9"
-  resolved "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.3.9.tgz"
+  resolved "https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-3.0.0.tgz"
   integrity sha512-ZuXsqE07EcggTWQjXUj+Aot/OMcD0bMKGgF63f7UxYcu5/AJF53aIpK1YoP5xR9l6s/Hy2b+t1AM0bLNPRuhwA==
   dependencies:
     "@jridgewell/trace-mapping" "^0.3.17"
@@ -9360,7 +9360,7 @@ webpack-sources@^3.2.3:
     neo-async "^2.6.2"
     schema-utils "^3.2.0"
     tapable "^2.1.1"
-    terser-webpack-plugin "^5.3.7"
+    terser-webpack-plugin "3.0.0"
     watchpack "^2.4.0"
     webpack-sources "^3.2.3"
 
