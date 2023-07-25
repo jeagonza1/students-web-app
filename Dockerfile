@@ -15,6 +15,8 @@ RUN echo "BUILD_ENV: " $BUILD_ENV
 
 RUN npm run-script $BUILD_ENV
 
+RUN npm run build
+
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
 FROM nginx:1.25.1-alpine
 COPY /nginx-conf/default.conf /etc/nginx/conf.d/
