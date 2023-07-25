@@ -1,19 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { createRoot } from 'react-dom/client';
+
+// Usage:
 
 
 const client = new ApolloClient({
-  uri: "http://localhost:8080/student-service",
+  //uri: "http://localhost:8080/student-service",
+
+  uri: "https://webgraphql-api-student.azurewebsites.net/student-service",
   cache: new InMemoryCache()
 });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>

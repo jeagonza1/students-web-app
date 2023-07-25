@@ -1,10 +1,18 @@
 import { useStudents } from "../hooks/useStudents";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function StudentList() {
+    const navigate = useNavigate();
+    const { error, loading, data } = useStudents({
 
-
-    const { error, loading, data } = useStudents();
+        onCompleted: (data) => {
+            navigate('/'); // Redirige a la página de la lista de estudiantes
+        },
+        onError: (error) => {
+            console.error('Error create student:', error);
+        },
+        refetchQueries: ['GetStudents'], // Recarga la lista de estudiantes después de crear uno
+    });
 
     if (loading) return <div>spinner...</div>
     if (error) return <div>somethin went wrong...</div>

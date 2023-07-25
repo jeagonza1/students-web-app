@@ -19,7 +19,12 @@ export default function Student() {
     const navigate = useNavigate();
 
     const [deleteStudent] = useMutation(DELETE_STUDENT, {
-        // after the mutation reload students
+        onCompleted: (data) => {
+            navigate('/');
+        },
+        onError: (error) => {
+            console.error('Error delete student:', error);
+        },
         refetchQueries: ['GetStudents'],
     });
 

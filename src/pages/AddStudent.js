@@ -48,12 +48,12 @@ export default function Student() {
 
     const [addStudent] = useMutation(CREATE_STUDENT, {
         onCompleted: (data) => {
-            navigate('/'); // Redirige a la página de la lista de estudiantes
+            navigate('/');
         },
         onError: (error) => {
             console.error('Error create student:', error);
         },
-        refetchQueries: ['GetStudents'], // Recarga la lista de estudiantes después de crear uno
+        refetchQueries: ['GetStudents'],
     });
 
     const handleAddStudent = (event) => {
